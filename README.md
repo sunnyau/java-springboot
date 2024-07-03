@@ -35,6 +35,10 @@ Afterwards you should be able to connect the H2 database.
 
 ![Screenshot 2024-07-03 092642](https://github.com/sunnyau/springboot-maven/assets/37674904/59431d5a-b442-4ce5-9e33-a7449ca05961)
 
+# to query person all
+
+http://localhost:8080/person/all
+
 
 ## Reference
 
