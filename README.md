@@ -22,7 +22,10 @@ If you see this error
 
 > Database "/home/sunny/test" not found, either pre-create it or allow remote database creation (not recommended in secure environments) [90149-224] 90149/90149 (Help)
 
-You need to create an empty file call test.mv.db
+![Screenshot 2024-07-03 092752](https://github.com/sunnyau/springboot-maven/assets/37674904/bc2ce472-0652-4522-b9c2-611d16d3ea7b)
+
+
+Then you need to create an empty file call test.mv.db
 
 > sunny@TDesktop:~$ touch test.mv.db
 
@@ -30,6 +33,7 @@ You need to create an empty file call test.mv.db
 
 Afterwards you should be able to connect the H2 database.
 
+![Screenshot 2024-07-03 092642](https://github.com/sunnyau/springboot-maven/assets/37674904/59431d5a-b442-4ce5-9e33-a7449ca05961)
 
 
 ## Reference
