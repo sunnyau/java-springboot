@@ -9,7 +9,7 @@ import lombok.Getter;
 public class PersonView {
 
     @JsonFormat
-    private final Integer id;
+    private final Long id;
     @JsonFormat
     private final String name;
     @JsonFormat

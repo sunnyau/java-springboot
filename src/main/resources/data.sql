@@ -1,0 +1,1 @@
+insert into Person (id, name, title) values (1, 'My name', 'My title');
