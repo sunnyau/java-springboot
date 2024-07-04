@@ -18,7 +18,7 @@ public class PersonController {
 
     @GetMapping("/person/all")
     public ResponseEntity getAll() {
-        System.out.println("PersonController is called");
+        // System.out.println("PersonController is called");
         return ResponseEntity.ok(personService.getAll());
     }
 }
