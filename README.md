@@ -1,14 +1,17 @@
-# java-springboot
-Spring boot built by maven
+# springboot-maven
 
-It has been upgraded to Java 21
+A Spring boot application built by maven. It can post a person and get persons. It is using H2 in-memory database.
 
-The codes are initially copied from https://github.com/spring-guides/gs-spring-boot/tree/main/complete
+# Software required
 
+openjdk version "21.0.3"
+Apache Maven 3.8.7
 
 # To start a spring boot application
 
-mvn spring-boot:run
+> mvn compile
+> mvn test
+> mvn spring-boot:run
 
 # To check spring boot result
 
@@ -37,11 +40,18 @@ Afterwards you should be able to connect the H2 database.
 
 # to query person all
 
-http://localhost:8080/person/all
+> http://localhost:8080/person/all
 
+# to post a person 
+
+> curl -X POST http://localhost:8080/person -H 'Content-Type: application/json' -d '{"name":"Julia","title":"princess"}'
 
 ## Reference
+
+The codes are initially copied from https://github.com/spring-guides/gs-spring-boot/tree/main/complete
 
 https://spring.io/guides/gs/spring-boot
 
 https://www.baeldung.com/spring-boot-h2-database
+
+
