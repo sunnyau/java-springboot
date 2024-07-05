@@ -22,10 +22,13 @@ public class PersonService {
     }
 
     public List<PersonView> getAll() {
-        // System.out.println("PersonService is called");
         List<Person> personList = personRepository.findAll();
-        // System.out.println("personList size is " + personList.size());
-        Function<Person,PersonView> convertUserToPersonView = person -> PersonView.builder().id(person.getId()).name(person.getName()).title(person.getTitle()).build();
-        return personList.stream().map(convertUserToPersonView).collect(toList());
+        Function<Person, PersonView> convertPersonToPersonView = person -> PersonView.builder().id(person.getId())
+                .name(person.getName()).title(person.getTitle()).build();
+        return personList.stream().map(convertPersonToPersonView).collect(toList());
+    }
+
+    public Person save(Person person) {
+        return personRepository.saveAndFlush(person);
     }
 }
