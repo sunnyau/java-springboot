@@ -5,19 +5,25 @@ A Spring boot application built by maven or gradle. It can post a person and get
 # Software required
 
 > openjdk version "21.0.3"
+
 > Apache Maven 3.8.7
+
 > Gradle 8.5
 
 # To start a spring boot application by maven
 
 > mvn compile
+
 > mvn test
+
 > mvn spring-boot:run
 
 # To start a spring boot application by gradle
 
 > gradle tasks --all
+
 > gradle check
+
 > gradle bootRun
 
 
