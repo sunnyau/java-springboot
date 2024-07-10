@@ -1,17 +1,24 @@
 # springboot-maven
 
-A Spring boot application built by maven. It can post a person and get persons. It is using H2 in-memory database.
+A Spring boot application built by maven or gradle. It can post a person and get persons. It is using H2 in-memory database.
 
 # Software required
 
 openjdk version "21.0.3"
 Apache Maven 3.8.7
 
-# To start a spring boot application
+# To start a spring boot application by maven
 
 > mvn compile
 > mvn test
 > mvn spring-boot:run
+
+# To start a spring boot application by gradle
+
+> gradle tasks --all
+> gradle check
+> gradle bootRun
+
 
 # To check spring boot result
 
