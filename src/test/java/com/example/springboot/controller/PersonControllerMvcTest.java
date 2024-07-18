@@ -46,7 +46,7 @@ public class PersonControllerMvcTest {
                 {"name":"Edward","title":"Racing Driver"}""";
         String expectedContent = """
                 {"id":1,"name":"Edward","title":"Racing Driver"}""";
-        mockMvc.perform(post("/person").contentType(MediaType.APPLICATION_JSON).content(content))
+        mockMvc.perform(post("/person/json").contentType(MediaType.APPLICATION_JSON).content(content))
                 .andExpect(status().isOk())
                 .andExpect(content().string(expectedContent));
     }
