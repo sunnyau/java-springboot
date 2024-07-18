@@ -32,33 +32,25 @@ public class PersonController {
     }
 
     @PostMapping(value = "/person/json", produces = "application/json")
-    public ResponseEntity<Person> update(@RequestBody Person person) {
-        System.out.println("ResponseEntity<Person> update(@RequestBody Person person) is called");
+    public ResponseEntity<Person> postPersonJson(@RequestBody Person person) {
+        System.out.println("postPersonJson is called");
         Person savedPerson = personService.save(person);
         return new ResponseEntity<Person>(savedPerson, HttpStatus.OK);
     }
     
-    @GetMapping("/design")
-    public String showDesignForm(Model model) {
-        model.addAttribute("design", new PersonPOJO());
-        return "design";
+    @GetMapping("/person")
+    public String showPersonForm(Model model) {
+        model.addAttribute("person", new PersonPOJO());
+        return "person";
     }
 
-    @PostMapping("/design")
-    public String postMethodName(PersonPOJO personPOJO) {
-        //TODO: process POST request
-        System.out.println("postMethodName is called " + personPOJO);
-        // PersonPOJO personPOJO = (PersonPOJO)model.getAttribute("design");
-        // String name = personPOJO.getName();
-        // String title = personPOJO.getTitle();
-        // System.out.println(personPOJO.getName());
-        // System.out.println(personPOJO.getTitle());
+    @PostMapping("/person")
+    public String postPerson(PersonPOJO personPOJO) {
+        System.out.println("postPerson is called " + personPOJO);
         Person person = new Person();
         person.setName(personPOJO.getName());
-        person.setTitle(personPOJO.getTitle());
-        
+        person.setTitle(personPOJO.getTitle());        
         Person savedPerson = personService.save(person);
-        // return new ResponseEntity<Person>(savedPerson, HttpStatus.OK);        
-        return "redirect:/design";
+        return "redirect:/person";
     }    
 }
