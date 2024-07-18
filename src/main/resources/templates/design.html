@@ -1,0 +1,22 @@
+<!-- tag::all[] -->
+<!-- tag::head[] -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>Taco Cloud</title>
+  <link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+
+<body>
+  <h1>Design your taco!</h1>
+  <form method="POST" th:object="${design}">
+    <h1>Welcome to Design view</h1>
+    Name : <input type="text" th:field="*{name}">
+    Title : <input type="text" th:field="*{title}">
+    <button>Submit new person</button>
+  </form>
+
+</body>
+
+</html>

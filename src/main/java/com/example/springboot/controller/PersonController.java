@@ -28,6 +28,7 @@ public class PersonController {
 
     @PostMapping(value = "/person", produces = "application/json")
     public ResponseEntity<Person> update(@RequestBody Person person) {
+        System.out.println("ResponseEntity<Person> update(@RequestBody Person person) is called");
         Person savedPerson = personService.save(person);
         return new ResponseEntity<Person>(savedPerson, HttpStatus.OK);
     }
