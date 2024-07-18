@@ -4,6 +4,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Builder;
 import lombok.Getter;
 
+/**
+ * to view Person in JSON format.
+ */
 @Builder
 @Getter
 public class PersonView {

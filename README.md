@@ -56,9 +56,11 @@ Afterwards you should be able to connect the H2 database.
 
 > http://localhost:8080/person/all
 
-# to post a person 
+# to add a person 
 
-> curl -X POST http://localhost:8080/person -H 'Content-Type: application/json' -d '{"name":"Julia","title":"princess"}'
+> curl -X POST http://localhost:8080/person/json -H 'Content-Type: application/json' -d '{"name":"Julia","title":"princess"}'
+
+> http://localhost:8080/person
 
 ## Reference
 
